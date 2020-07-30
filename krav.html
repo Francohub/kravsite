@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krav Maga SDI & Weapons Academia</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="ripple.min.css">
+
+    <style>
+        @font-face {
+            font-family: Jura;
+            src: local("Jura/Jura-VariableFont_wght.ttf");
+        }
+        /* Sticky Footer Classes */
+        
+        html,
+        body {
+            background-image: url("img/bg.jpg");
+            height: 100%;
+            margin: 0;
+        }
+        
+        #page-content {
+            flex: 1 0 auto;
+        }
+        
+        #sticky-footer {
+            flex-shrink: none;
+        }
+        /* Other Classes for Page Styling */
+        /*
+        estilo color fade de izquierda a derecha----------------
+        body {
+        background: #007bff;
+        background: linear-gradient(to right, #0062E6, #33AEFF);
+        }*/
+        /* Estilos galeria de imagenes  */
+        
+        header {
+            margin: .5vw;
+            font-size: 0;
+            display: -ms-flexbox;
+            -ms-flexbox-wrap: wrap;
+            -ms-flexbox-direction: column;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            display: -webkit-box;
+            display: flex;
+        }
+        
+        header div {
+            -webkit-box-flex: auto;
+            -ms-flex: auto;
+            flex: auto;
+            width: 200px;
+            margin: .5vw
+        }
+        
+        header div img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media screen and (max-width: 400px) {
+            header div {
+                margin: 0;
+            }
+        }
+        
+        header {
+            padding: 0;
+        }
+        /* Estilos pie con redes sociales */
+        /* Footer */
+        
+        #footer {
+            margin: 0;
+            padding: 0;
+            background: #252525 !important;
+        }
+        
+        #footer h5 {
+            padding-left: 10px;
+            border-left: 3px solid #eeeeee;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        
+        #footer a {
+            color: #ffffff;
+            text-decoration: none !important;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+        
+        #footer ul.social li {
+            padding: 3px 0;
+        }
+        
+        #footer ul.social li a i {
+            margin-right: 5px;
+            font-size: 25px;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        
+        #footer ul.social li:hover a i {
+            font-size: 30px;
+            margin-top: -10px;
+        }
+        
+        #footer ul.social li a,
+        #footer ul.quick-links li a {
+            color: #ffffff;
+        }
+        
+        #footer ul.social li a:hover {
+            color: #eeeeee;
+        }
+        
+        #footer ul.quick-links li {
+            padding: 3px 0;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        
+        #footer ul.quick-links li:hover {
+            padding: 3px 0;
+            margin-left: 5px;
+            font-weight: 700;
+        }
+        
+        #footer ul.quick-links li a i {
+            margin-right: 5px;
+        }
+        
+        #footer ul.quick-links li:hover a i {
+            font-weight: 700;
+        }
+        
+        @media (max-width:767px) {
+            #footer h5 {
+                padding-left: 0;
+                border-left: transparent;
+                padding-bottom: 0px;
+                margin-bottom: 10px;
+            }
+        }
+        /* Pricing table */
+        
+        section.pricing {
+            background: #007bff;
+            background: linear-gradient(to right, #3f0000, #000000);
+        }
+        
+        .pricing .card {
+            background-color: darkgrey;
+            border: none;
+            border-radius: .5rem;
+            transition: all 0.2s;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing hr {
+            margin: 1.5rem 0;
+        }
+        
+        .pricing .card-title {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            letter-spacing: .1rem;
+            font-weight: bold;
+        }
+        
+        .pricing .card-price {
+            font-size: 3rem;
+            margin: 0;
+        }
+        
+        .pricing .card-price .period {
+            font-size: 0.8rem;
+        }
+        
+        .pricing ul li {
+            margin-bottom: 1rem;
+        }
+        
+        .pricing .text-muted {
+            opacity: 0.7;
+        }
+        
+        .pricing .btn {
+            background-color: rgb(43, 179, 2);
+            font-size: 80%;
+            border-radius: 5rem;
+            letter-spacing: .1rem;
+            font-weight: bold;
+            padding: 1rem;
+            opacity: 0.7;
+            transition: all 0.2s;
+        }
+        /* Hover Effects on Card */
+        
+        @media (min-width: 992px) {
+            .pricing .card:hover {
+                margin-top: -.25rem;
+                margin-bottom: .25rem;
+                box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+            }
+            .pricing .card:hover .btn {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column">
+
+    <span style="text-align: center;">
+      <img src="img/pngsdi2.png" width="660" height="253" alt="">
+    </span>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 bg-dark">
+        <div class="container">
+            <div class="navbar-collapse" id="navbarResponsive">
+                <span style="text-align: center">
+
+            <ul id="menu" class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+                <a class="nav-link text-uppercase text-expanded" href="index.html">INICIO</a>
+            </li>
+            <li class="nav-item active px-lg-4">
+                <a class="nav-link text-uppercase text-expanded" href="krav.html">KRAV MAGA SDI <br/>URBAN</a>
+            </li>
+            <li class="nav-item px-lg-4">
+                <a class="nav-link text-uppercase text-expanded" href="tactical.html">TACTICAL & CQB</a>
+            </li>
+            <li class="nav-item px-lg-4">
+                <a class="nav-link text-uppercase text-expanded" href="weapons.html">WEAPONS ACADEMIA</a>
+            </li>
+            <li class="nav-item px-lg-4">
+                <a class="nav-link text-uppercase text-expanded" href="prods.html">PRODUCTOS</a>
+            </li>
+            <li class="nav-item px-lg-4">
+                <a class="nav-link text-uppercase text-expanded" href="contact.html">CONTACTO</a>
+            </li>
+            </ul>
+
+            </span>
+            </div>
+    </nav>
+
+
+
+    <div id="page-content">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <h1 class="font-weight-light mt-4 text-white">Krav Maga SDI</h1>
+                    <p class="lead text-white-50">El krav magá es el sistema oficial de lucha y defensa personal usado por las Fuerzas de Defensa y Seguridad israelíes, conocido en sus comienzos como krav.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <header>
+                <div><img src="img/sdi ig (1).png"></div>
+                <div><img src="img/sdi ig (2).png"></div>
+                <div><img src="img/sdi ig (3).png"></div>
+                <div><img src="img/sdi ig (4).png"></div>
+                <div><img src="img/sdi ig (5).png"></div>
+                <div><img src="img/sdi ig (6).png"></div>
+                <div><img src="img/sdi ig (10).png"></div>
+                <div><img src="img/sdi ig (11).png"></div>
+                <div><img src="img/sdi ig (12).png"></div>
+                <div><img src="img/sdi ig (13).png"></div>
+                <div><img src="img/sdi ig (14).png"></div>
+                <div><img src="img/sdi ig (15).png"></div>
+                <div><img src="img/sdi ig (16).png"></div>
+                <div><img src="img/sdi ig (19).png"></div>
+                <div><img src="img/sdi ig (20).png"></div>
+                <div><img src="img/sdi ig (24).png"></div>
+                <div><img src="img/sdi ig (26).png"></div>
+                <div><img src="img/sdi ig (27).png"></div>
+                <div><img src="img/sdi ig (28).png"></div>
+            </header>
+        </div>
+
+        <!-- pricing table -->
+
+        <section class="pricing py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Free Tier -->
+                    <div class="col-lg-4">
+                        <div class="card mb-5 mb-lg-0">
+                            <div class="card-body">
+                                <div class="card-headertext-uppercase text-center">
+                                    <h5 class="card-title text-uppercase text-center">Cursos iniciantes</h5>
+                                </div>
+                                <h5 class="card-title text-muted text-uppercase text-center"></h5>
+                                <h6 class="card-price text-center">$0<span class="period">/Mes</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>50 cupos por mes</strong></li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>Especificaciones o caracteristicas de los cursos, etc...</li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>...</li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>...</li>
+                                    <!-- <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span></li> -->
+                                </ul>
+                                <a href="#" class="btn btn-block btn-primary text-uppercase">Contactar por WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Plus Tier -->
+                    <div class="col-lg-4">
+                        <div class="card mb-5 mb-lg-0">
+                            <div class="card-body">
+                                <div class="card-headertext-uppercase text-center">
+                                    <h5 class="card-title text-uppercase text-center">Cursos VIP</h5>
+                                </div>
+                                <h6 class="card-price text-center">$9<span class="period">/Mes</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Hasta 25 cupos por mes</strong></li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>Especificaciones o caracteristicas de los cursos, etc...</li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>...</li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>...</li>
+                                    <!-- <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span></li> -->
+                                </ul>
+                                <a href="#" class="btn btn-block btn-primary text-uppercase">Contactar por WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pro Tier -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase text-center">Cursos Pro VIP</h5>
+                                <h6 class="card-price text-center">$49<span class="period">/Mes</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Cupos ilimitados</strong></li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>Especificaciones o caracteristicas de los cursos, etc...</li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>...</li>
+                                    <li><span class="fa-li"><i class="fa fa-circle"></i></span>...</li>
+                                    <!-- <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong></strong></li>
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span></li> -->
+                                </ul>
+                                <br>
+                                <br>
+                                <a href="#" class="btn btn-block btn-primary text-uppercase">Contactar por WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logokrav2letras.png" width="300" height="100" alt="">
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 bg-dark">
+                <div class="container">
+                    <div class="navbar-collapse" id="navbarResponsive">
+                        <span style="text-align: center">
+        
+                    <ul id="menu" class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="krav.html">KRAV MAGA SDI <br/>URBAN</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="tactical.html">TACTICAL & CQB</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="weapons.html">WEAPONS ACADEMIA</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="prods.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="contact.html">CONTACTO</a>
+                    </li>
+                    </ul>
+        
+                    </span>
+                    </div>
+            </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <section id="footer">
+
+        <div class="container">
+            <!-- <div class="row" style="text-align: center;"> -->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item" style="margin: 20px;">
+                    <a href="https://www.instagram.com/kravmagasdi/" target="_blank">INSTAGRAM<br/><br/><img src="img/ig.png" witdh="50px" height="50" alt=""></a>
+                </li>
+                <li class="list-inline-item" style="margin: 20px;">
+                    <a href="https://youtube.com/" target="_blank">YOUTUBE<br/><br/><img src="img/yt.png" witdh="50px" height="50" alt=""></a>
+                </li>
+                <li class="list-inline-item" style="margin: 20px;">
+                    <a href="https://api.whatsapp.com/send?phone=542994584194">WHATSAPP<br/><br/><img src="img/wpp.png" witdh="50px" height="50" alt="">
+                            <!--Envíanos un mensaje de WhatsApp-->
+                        </a>
+                    <a href="https://www.fiverr.com/share/qb8D02" target="_blank"></a>
+                </li>
+            </ul>
+            <!-- </div> -->
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p>Este el unico sitio ficial de las academias Krav Maga SDI y Weapons Academia</p>
+                    <p class="h6"><a>Neuquén, Neuquén, Argentina</a></p><br/>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Owner Jorge Manriquez</small>
+        </div>
+    </footer>
+</body>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="jquery.slim.js"></script>
+
+</html>
